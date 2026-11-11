@@ -51,3 +51,9 @@ TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery.fstab
 
 BOARD_SHIPPING_API_LEVEL := 30
 
+
+# Recovery display
+
+TARGET_SCREEN_WIDTH := 1080
+TARGET_SCREEN_HEIGHT := 2400
+TW_THEME := portrait_hdpi
