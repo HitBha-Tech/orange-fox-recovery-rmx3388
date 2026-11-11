@@ -9,7 +9,7 @@ on:
       - '.github/workflows/build_orangefox.yml'
 
 permissions:
-  contents: read
+  contents: write
 
 jobs:
   build:
@@ -215,7 +215,7 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           tag="OrangeFox-rmx3388-${GITHUB_RUN_ID}"
-          image="$RUNNER_TEMP/aosp/out/target/product/RMX3388/recovery.img"
+          image="$RUNNER_TEMP/orangefox-artifacts/OrangeFox-RMX3388.img"
           gh release create "$tag" "$image" \
             --title "OrangeFox Recovery for RMX3388 (build ${GITHUB_RUN_NUMBER})" \
             --notes "OrangeFox R 12.1 recovery build for Realme RMX3388. SHA-256 is available in the workflow artifact."
